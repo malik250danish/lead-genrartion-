@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,12 +24,6 @@
       rel="stylesheet"
     />
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -40,9 +35,8 @@
   </head>
 
   <body>
-    <!-- Enhanced Banner Section -->
+    <!-- Banner Section -->
     <section id="home" class="banner-section">
-      <!-- Desktop overlay -->
       <div
         class="banner-overlay d-none d-lg-flex"
         data-aos="fade-right"
@@ -66,7 +60,6 @@
         </div>
       </div>
 
-      <!-- Mobile text overlay -->
       <div
         class="banner-text d-lg-none"
         data-aos="fade-up"
@@ -86,13 +79,17 @@
       </div>
     </section>
 
-    <!-- Enhanced Lead Form Section -->
+    <!-- Lead Form Section -->
     <section id="quote" class="form-section">
       <div class="container">
         <div class="lead-form" data-aos="fade-up">
           <h3><i class="fas fa-calculator"></i> Start the Conversation</h3>
-
-          <form id="leadForm" novalidate>
+          <form
+            id="leadForm"
+            action="https://script.google.com/macros/s/AKfycbwYu7AhrLPUljlXfd_d3St7IxE75ph3hAJpcu1saL_T_P5K0ZM9aRmV3ewHDE2AJVV2dA/exec"
+            method="post"
+            novalidate
+          >
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -160,17 +157,23 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="powerBill" class="form-label"
-                    >Estimated Monthly Power Bill (Optional)</label
-                  >
-                  <select class="form-select" id="powerBill" name="powerBill">
-                    <option value="">Select range...</option>
-                    <option value="under-100">Under $100</option>
-                    <option value="100-200">$100 - $200</option>
-                    <option value="200-300">$200 - $300</option>
-                    <option value="300-500">$300 - $500</option>
-                    <option value="over-500">Over $500</option>
-                  </select>
+                  <label for="powerBill" class="form-label">
+                    Estimated Monthly Power Bill (Optional)
+                  </label>
+                  <input
+                    list="powerBillOptions"
+                    class="form-select"
+                    id="powerBill"
+                    name="powerBill"
+                    placeholder="$"
+                  />
+                  <datalist id="powerBillOptions">
+                    <option value="Under $100"></option>
+                    <option value="$100 - $200"></option>
+                    <option value="$200 - $300"></option>
+                    <option value="$300 - $500"></option>
+                    <option value="Over $500"></option>
+                  </datalist>
                 </div>
               </div>
               <div class="col-md-6 align-self-end">
@@ -218,7 +221,7 @@
                 id="notes"
                 name="notes"
                 rows="4"
-                placeholder="Tell us more about your requirements..."
+                placeholder="Tell us more.."
               ></textarea>
             </div>
 
@@ -242,10 +245,10 @@
       </div>
     </section>
 
-    <!-- Enhanced Trust Section -->
+    <!-- Trust Section -->
     <section class="trust-section">
       <div class="container">
-        <div class="trust-content">
+        <div class="trust-content text-center">
           <div class="trust-item">
             <i class="fas fa-certificate"></i>
             <span>CEC Solar and Battery Accredited Installer</span>
@@ -256,18 +259,18 @@
           </div>
           <div class="trust-item">
             <i class="fas fa-shield-alt"></i>
-            <span
-              >All installs covered by manufacturer warranties & workmanship
-              guarantee</span
-            >
+            <span>
+              All installs covered by manufacturer warranties & workmanship
+              guarantee
+            </span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enhanced Footer -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="container text-center">
         <p>
           <strong>Privacy:</strong> Your details may be shared with local,
           relevant service providers to give you accurate solar and battery
@@ -277,16 +280,9 @@
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Custom Script -->
     <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
