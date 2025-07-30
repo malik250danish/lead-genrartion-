@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolarWaye - Premium Solar Solutions</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+
+  <body>
+    <!-- Enhanced Banner Section -->
+    <section id="home" class="banner-section">
+      <!-- Desktop overlay -->
+      <div
+        class="banner-overlay d-none d-lg-flex"
+        data-aos="fade-right"
+        data-aos-delay="300"
+      >
+        <div class="banner-text" data-aos="fade-up" data-aos-delay="500">
+          <h1>
+            Hundreds of homes across Northern Rivers and SE QLD are locking in
+            long-term solar + battery savings before rebates phase out and grid
+            prices spike again.
+          </h1>
+          <p>
+            <i class="fas fa-sun"></i> Enter your details below and we'll
+            contact you for a free quote. You'll speak directly with a qualified
+            local installer (not a pushy sales team). No pressure, no spam -
+            just a real chat about your options.
+          </p>
+          <a href="#quote" class="cta-button">
+            <i class="fas fa-calculator"></i> Get Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile text overlay -->
+      <div
+        class="banner-text d-lg-none"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h1>
+          Hundreds of homes across Northern Rivers and SE QLD are locking in
+          long-term solar + battery savings.
+        </h1>
+        <p>
+          <i class="fas fa-sun"></i> Get a free quote from qualified local
+          installers. No pressure, no spam - just honest advice.
+        </p>
+        <a href="#quote" class="cta-button">
+          <i class="fas fa-calculator"></i> Get Free Quote
+        </a>
+      </div>
+    </section>
+
+    <!-- Enhanced Lead Form Section -->
+    <section id="quote" class="form-section">
+      <div class="container">
+        <div class="lead-form" data-aos="fade-up">
+          <h3><i class="fas fa-calculator"></i> Start the Conversation</h3>
+
+          <form id="leadForm" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="fullName"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your full name.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="suburb" class="form-label">Suburb *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="suburb"
+                    name="suburb"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your suburb.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your phone number.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="powerBill" class="form-label"
+                    >Estimated Monthly Power Bill (Optional)</label
+                  >
+                  <select class="form-select" id="powerBill" name="powerBill">
+                    <option value="">Select range...</option>
+                    <option value="under-100">Under $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200-300">$200 - $300</option>
+                    <option value="300-500">$300 - $500</option>
+                    <option value="over-500">Over $500</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 align-self-end">
+                <div class="form-group">
+                  <label for="timeframe" class="form-label"
+                    >Preferred Job Timeframe *</label
+                  >
+                  <select
+                    class="form-select"
+                    id="timeframe"
+                    name="timeframe"
+                    required
+                  >
+                    <option value="">Select timeframe...</option>
+                    <option value="asap">As soon as possible</option>
+                    <option value="1-3-months">
+                      Within the next 1–3 months
+                    </option>
+                    <option value="exploring">Just exploring options</option>
+                    <option value="other">Other (enter preferred date)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a timeframe.</div>
+
+                  <div class="custom-date-field" id="customDateField">
+                    <label for="customDate" class="form-label"
+                      >Preferred Date</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="customDate"
+                      name="customDate"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes" class="form-label"
+                >Extra Notes (Optional)</label
+              >
+              <textarea
+                class="form-control"
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Tell us more about your requirements..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Start the Conversation
+            </button>
+          </form>
+
+          <div class="success-message" id="successMessage">
+            <h4>
+              <i class="fas fa-check-circle"></i> Thanks for submitting your
+              details!
+            </h4>
+            <p>
+              You're one step closer to energy independence and taking back
+              control of your power. A qualified local installer will be in
+              touch shortly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Trust Section -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-content">
+          <div class="trust-item">
+            <i class="fas fa-certificate"></i>
+            <span>CEC Solar and Battery Accredited Installer</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-home"></i>
+            <span>Locally owned and operated</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-shield-alt"></i>
+            <span
+              >All installs covered by manufacturer warranties & workmanship
+              guarantee</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <strong>Privacy:</strong> Your details may be shared with local,
+          relevant service providers to give you accurate solar and battery
+          quotes. We never sell your info to unrelated third parties. You can
+          request removal at any time.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>
